@@ -13,4 +13,4 @@
 - [ ] Configure GitHub Actions workflow to build unsigned iOS IPA artifact using GitHub PAT
 - [ ] Verify build setup and project checkpoint
 - [x] Implement simulated Face ID / Touch ID biometric authentication screen and modal
-- [x] Create GitHub repository automatically using GitHub PAT and push source code & Actions workflow
+- [x] Created GitHub repository `open-n-create/td-mobile-banking-simulation` automatically using GitHub PAT and pushed all source code and Actions workflow
