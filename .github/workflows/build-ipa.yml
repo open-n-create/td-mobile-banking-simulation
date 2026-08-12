@@ -53,8 +53,12 @@ jobs:
       - name: Build Unsigned App Archive
         run: |
           cd ios
-          xcodebuild -workspace TDMobileBanking.xcworkspace \
-            -scheme TDMobileBanking \
+          WORKSPACE=$(ls -d *.xcworkspace | head -n 1)
+          SCHEME=$(basename "$WORKSPACE" .xcworkspace)
+          echo "Found workspace: $WORKSPACE"
+          echo "Using scheme: $SCHEME"
+          xcodebuild -workspace "$WORKSPACE" \
+            -scheme "$SCHEME" \
             -configuration Release \
             -sdk iphoneos \
             -derivedDataPath build \
@@ -67,11 +71,11 @@ jobs:
         run: |
           mkdir -p Payload
           cp -r ios/build/Build/Products/Release-iphoneos/*.app Payload/
-          zip -r TDMobileBanking-Unsigned.ipa Payload
+          zip -r TD-Unsigned.ipa Payload
           rm -rf Payload
 
       - name: Upload IPA Artifact
         uses: actions/upload-artifact@v4
         with:
-          name: TDMobileBanking-Unsigned-IPA
-          path: TDMobileBanking-Unsigned.ipa
+          name: TD-Unsigned-IPA
+          path: TD-Unsigned.ipa
