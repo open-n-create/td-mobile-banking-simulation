@@ -43,12 +43,12 @@ jobs:
       - name: Install Dependencies
         run: pnpm install
 
+      - name: Expo Prebuild iOS
+        run: npx expo prebuild --platform ios --clean
+
       - name: Install CocoaPods
         run: |
           cd ios && pod install && cd ..
-
-      - name: Expo Prebuild iOS
-        run: npx expo prebuild --platform ios --clean
 
       - name: Build Unsigned App Archive
         run: |
