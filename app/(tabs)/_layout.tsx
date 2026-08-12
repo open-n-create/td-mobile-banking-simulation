@@ -11,11 +11,13 @@ export default function TabLayout() {
   const insets = useSafeAreaInsets();
   const bottomPadding = Platform.OS === "web" ? 12 : Math.max(insets.bottom, 8);
   const tabBarHeight = 56 + bottomPadding;
+  const tdGreen = "#008A00";
 
   return (
     <Tabs
       screenOptions={{
-        tabBarActiveTintColor: colors.tint,
+        tabBarActiveTintColor: tdGreen,
+        tabBarInactiveTintColor: "#687076",
         headerShown: false,
         tabBarButton: HapticTab,
         tabBarStyle: {
@@ -31,8 +33,36 @@ export default function TabLayout() {
       <Tabs.Screen
         name="index"
         options={{
-          title: "Home",
-          tabBarIcon: ({ color }) => <IconSymbol size={28} name="house.fill" color={color} />,
+          title: "Accounts",
+          tabBarIcon: ({ color }) => <IconSymbol size={24} name="house.fill" color={color} />,
+        }}
+      />
+      <Tabs.Screen
+        name="transfers"
+        options={{
+          title: "Transfer",
+          tabBarIcon: ({ color }) => <IconSymbol size={24} name="arrow.left.right" color={color} />,
+        }}
+      />
+      <Tabs.Screen
+        name="pay-bills"
+        options={{
+          title: "Pay Bills",
+          tabBarIcon: ({ color }) => <IconSymbol size={24} name="dollarsign.circle.fill" color={color} />,
+        }}
+      />
+      <Tabs.Screen
+        name="deposit"
+        options={{
+          title: "Deposit",
+          tabBarIcon: ({ color }) => <IconSymbol size={24} name="camera.fill" color={color} />,
+        }}
+      />
+      <Tabs.Screen
+        name="more"
+        options={{
+          title: "More",
+          tabBarIcon: ({ color }) => <IconSymbol size={24} name="gear" color={color} />,
         }}
       />
     </Tabs>
