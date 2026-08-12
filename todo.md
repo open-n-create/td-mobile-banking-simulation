@@ -14,3 +14,4 @@
 - [ ] Verify build setup and project checkpoint
 - [x] Implement simulated Face ID / Touch ID biometric authentication screen and modal
 - [x] Created GitHub repository `open-n-create/td-mobile-banking-simulation` automatically using GitHub PAT and pushed all source code and Actions workflow
+- [x] Rename app display name to "TD" and generate official TD-branded icon assets
