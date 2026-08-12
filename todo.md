@@ -12,5 +12,5 @@
 - [ ] Implement Settings, Security & Profile screen
 - [ ] Configure GitHub Actions workflow to build unsigned iOS IPA artifact using GitHub PAT
 - [ ] Verify build setup and project checkpoint
-- [ ] Implement simulated Face ID / Touch ID biometric authentication screen and modal
-- [ ] Create GitHub repository automatically using GitHub PAT and push source code & Actions workflow
+- [x] Implement simulated Face ID / Touch ID biometric authentication screen and modal
+- [x] Create GitHub repository automatically using GitHub PAT and push source code & Actions workflow
